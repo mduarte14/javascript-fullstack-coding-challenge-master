@@ -1,0 +1,21 @@
+type Task {
+  id: Int!
+  group: String!
+  task: String!
+  dependencyIds: [Int]!
+  completedAt: String
+}
+
+input ToggleTaskInput {
+  taskId: Int!
+  completedAt: String
+}
+
+# GQL Queries and Mutations
+type Query {
+  tasks: [Task!]!
+}
+
+type Mutation {
+  toggleTask(toggleTaskInput: ToggleTaskInput!): Boolean!
+}

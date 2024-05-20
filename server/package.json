@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "0.1.1",
+  "description": "Wonderschool full-stack javascript coding challenge",
+  "private": true,
+  "scripts": {
+    "gen.types": "graphql-codegen --config graphql.config.yml",
+    "dev": "nodemon \"src/server.ts\" --delay 1 --exec \"ts-node\" src/server.ts -e ts,graphql"
+  },
+  "devDependencies": {
+    "@babel/core": "7.24.5",
+    "@babel/preset-env": "7.24.5",
+    "@babel/preset-typescript": "7.24.1",
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/typescript": "4.0.6",
+    "@graphql-codegen/typescript-resolvers": "4.0.6",
+    "nodemon": "3.1.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "apollo-datasource": "3.3.2",
+    "apollo-server": "3.13.0",
+    "apollo-server-express": "3.13.0",
+    "cors": "2.8.5",
+    "graphql": "16.8.1",
+    "graphql-import": "1.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

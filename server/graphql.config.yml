@@ -1,0 +1,12 @@
+schema: ./src/schema.graphql
+generates:
+  ./src/schemaTypes.ts:
+    config:
+      contextType: ./GQLContext#GQLContext
+      mappers:
+        Task: ./models/TaskModel#TaskModel
+    plugins:
+      - typescript
+      - typescript-resolvers
+config:
+  useIndexSignature: true
